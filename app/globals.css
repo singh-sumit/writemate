@@ -2,26 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+    margin: 0px;
+    padding: 0px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+#nativeColorPicker{
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    cursor: pointer;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+#nativeColorPicker::-webkit-color-swatch-wrapper {
+    padding: 0; 
+}
+#nativeColorPicker::-webkit-color-swatch {
+    border: 0px;
+    border-radius: 50%;
 }
